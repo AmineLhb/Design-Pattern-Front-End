@@ -1,0 +1,62 @@
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+<div class="container">
+
+  <h1>  Passer commande   </h1>
+
+<form   [formGroup]="myForm"  (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name </label>
+    <input type="email" class="form-control" formControlName="name" id="name" aria-describedby="client name">
+
+  </div>
+  <div class="mb-3">
+
+    <label for="exampleInputEmail1" class="form-label">Select restau</label>
+    <select class="form-select" id="restau"  formControlName="restau" aria-label="Default select example">
+      <option value="1">Fez  restau</option>
+      <option value="2">Meknes restau</option>
+    </select>
+
+  </div>
+
+
+  <div class="mb-3">
+
+    <label for="exampleInputEmail1" class="form-label">Select Chef</label>
+    <select class="form-select" id="chef"  formControlName="chef" aria-label="Default select example">
+
+      <option value={{c.name}} *ngFor="let c of chefs"> {{c.name}} </option>
+
+    </select>
+
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Select pizza</label>
+
+    <select class="form-select" id="pizza"  formControlName="pizza" aria-label="Default select example">
+
+      <option value="1">Pizza Fromage</option>
+      <option value="2">Pizza Fruits De Mer</option>
+      <option value="3">Pizza Mixte</option>
+      <option value="4">Pizza Quatre Saisons</option>
+    </select>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+</div>
+
