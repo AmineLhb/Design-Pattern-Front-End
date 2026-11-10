@@ -1,27 +1,29 @@
-# DesignPatern
+# Design Pattern Pizzeria — Front-End (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+Interface Angular de l'application de commande de pizzas. Elle consomme l'API REST Spring Boot du projet
+[Design-Pattern-Back-End](https://github.com/AmineLhb/Design-Pattern-Back-End).
+Projet académique réalisé à l'ENSA Fès (2022).
 
-## Development server
+## Pages
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+| Route | Composant | Contenu |
+|---|---|---|
+| `/home` | `HomeComponent` | Page d'accueil |
+| `/chefs` | `ChefComponent` | Liste et inscription des chefs |
+| `/commande` | `ClientComponent` | Formulaire de commande (client, pizza, restaurant, chef) |
 
-## Code scaffolding
+Les appels HTTP vers l'API sont centralisés dans `src/app/Services/service.service.ts` (`HttpClient`).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Stack
 
-## Build
+Angular 12, TypeScript, Bootstrap 5, Bootstrap Icons.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Lancer le projet
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Démarrer d'abord le back-end sur `http://localhost:8080`.
+2. Installer les dépendances et lancer le serveur de développement :
+   ```bash
+   npm install
+   npx ng serve
+   ```
+3. Ouvrir `http://localhost:4200`.
